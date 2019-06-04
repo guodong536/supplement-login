@@ -6,6 +6,7 @@ public class DateUtil {
     SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 
    public String getDingShi(){
+       System.out.println("string");
       return null;
    }
 
