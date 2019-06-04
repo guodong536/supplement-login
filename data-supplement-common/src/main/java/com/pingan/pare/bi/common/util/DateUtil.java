@@ -34,6 +34,6 @@ public class DateUtil {
     *
     */
     public String getFirstDate(){
-        return new Date();
+        return null;
     }
 }
