@@ -9,31 +9,4 @@ public class DateUtil {
        System.out.println("string");
       return null;
    }
-
-   public String getNowDate(){
-      return sdf.format(new Date());
-   }
-
-    /**
-     * return last date
-     * @return
-     */
-    public Date getLastDate(){
-        return new Date();
-    }
-
-    public Date getDate(String date){
-        return new Date();
-    }
-
-    public String getDate(){
-        return null;
-    }
-
-    /**
-    *
-    */
-    public String getFirstDate(){
-        return null;
-    }
 }
