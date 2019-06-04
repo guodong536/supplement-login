@@ -5,7 +5,7 @@ import java.util.Date;
 public class DateUtil {
     SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 
-   public String getDingShi(){
+   public Date getDingShi(){
        System.out.println("string");
       return null;
    }
@@ -21,8 +21,12 @@ public class DateUtil {
     public Date getLastDate(){
         return new Date();
     }
-    
-    public Date getDate(){
+
+    public Date getDate(String date){
+        return new Date();
+    }
+
+    public String getDate(){
         return null;
     }
 }
