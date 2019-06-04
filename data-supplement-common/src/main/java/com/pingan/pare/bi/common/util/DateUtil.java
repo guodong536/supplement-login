@@ -6,4 +6,9 @@ public class DateUtil {
    public Date getNowDate(){
       return new Date();
    }
+   
+   public String getDingShi(){
+      return null;
+   }
+   
 }
