@@ -20,4 +20,8 @@ public class DateUtil {
     public Date getLastDate(){
         return new Date();
     }
+    
+    public Date getDate(){
+        return null;
+    }
 }
