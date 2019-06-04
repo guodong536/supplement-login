@@ -29,4 +29,11 @@ public class DateUtil {
     public String getDate(){
         return null;
     }
+
+    /**
+    *
+    */
+    public String getFirstDate(){
+        return new Date();
+    }
 }
