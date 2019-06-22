@@ -3,15 +3,11 @@ package com.pingan.pare.bi.login.domain.po;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-import com.pingan.pare.bi.login.domain.vo.SysMenuVo;
-import com.pingan.pare.bi.login.domain.vo.SysRoleVo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-import org.springframework.data.annotation.Transient;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * <p>
@@ -50,10 +46,4 @@ public class SupplementUser implements Serializable {
      * 状态
      */
     private String status;
-
-    @Transient
-    private List<SysRoleVo> roleList;
-
-    @Transient
-    private List<SysMenuVo> menuList;
 }

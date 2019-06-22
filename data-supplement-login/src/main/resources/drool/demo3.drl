@@ -1,0 +1,33 @@
+package drool;
+
+import com.pingan.pare.bi.login.domain.vo.User;
+import com.pingan.pare.bi.login.domain.vo.Order;
+
+query "query count"
+        $user:User()
+end
+
+//one-rule
+rule "one-rule"
+    no-loop true
+    when
+        $user:User(age>18,name matches ".*东.*")
+
+    then
+        $user.setName("guodong536"+$user.getName());
+        System.out.println("one-rule:user:{}"+$user);
+        update($user);
+end
+
+
+//two-rule
+rule "two-rule"
+    no-loop true
+    when
+        $user:User(name matches ".*guodong.*")
+
+    then
+        $user.setName($user.getName()+"长江7号");
+        $user.setSex("男");
+        System.out.println("two-rule:user:{}"+$user);
+end

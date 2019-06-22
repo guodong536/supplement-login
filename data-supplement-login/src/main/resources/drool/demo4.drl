@@ -1,0 +1,20 @@
+package drool;
+
+import com.pingan.pare.bi.login.domain.vo.Order;
+import com.pingan.pare.bi.login.domain.vo.User;
+
+declare Addresss
+    age : int;
+    name: String;
+    city: String;
+end
+
+
+rule "rule-one"
+    when
+        $address:Addresss(city matches "湖北");
+    then
+        $address.setAge(18);
+        $address.setName("东郭");
+        System.out.println($address);
+end

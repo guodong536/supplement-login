@@ -1,0 +1,41 @@
+package drool;
+
+import com.pingan.pare.bi.login.domain.vo.Order;
+import com.pingan.pare.bi.login.domain.vo.User;
+
+
+//one rule
+rule "one-rule"
+    no-loop true
+    activation-group "test1"
+    when
+        $order:Order(name contains "东");
+    then
+        $order.setSumCount(11);
+        $order.setSumPrice(21);
+        System.out.println($order+":one-rule");
+end
+
+
+//two rule
+rule "two-rule"
+    no-loop true
+    activation-group "test1"
+    when
+        $order:Order(name matches ".*东.*");
+    then
+        $order.setSumCount(22);
+        $order.setSumPrice(45);
+        System.out.println($order+":two-rule");
+end
+
+rule "three-rule"
+    no-loop true
+    activation-group "test1"
+    when
+        $order:Order(name matches ".*东.*");
+    then
+        $order.setSumCount(33);
+        $order.setSumPrice(56);
+        System.out.println($order+":three-rule");
+end

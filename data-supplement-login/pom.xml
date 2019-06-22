@@ -82,6 +82,11 @@
             <version>1.0.0</version>
         </dependency>
 
+        <!--redis集群-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

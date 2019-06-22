@@ -3,6 +3,7 @@ package com.pingan.pare.bi.login.controller;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.pingan.pare.bi.common.domain.ResponseData;
 import com.pingan.pare.bi.login.domain.po.SupplementUser;
+import com.pingan.pare.bi.login.listener.Sender;
 import com.pingan.pare.bi.login.service.SupplementUserService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,6 +74,24 @@ public class UserController {
                }
             }
             result.put("flag",flag);
+            result.put("user",supplementUser);
+        }catch (Exception e){
+            e.printStackTrace();
+            return ResponseData.error(-1,e.getMessage());
+        }
+
+        return ResponseData.ok(result);
+    }
+
+    @Autowired
+    private Sender sender;
+
+    @PostMapping(value = "/cest")
+    public ResponseData cest(@RequestBody SupplementUser supplementUser){
+
+        Map<String,Object> result=new HashMap<>();
+        try {
+            sender.send();
             result.put("user",supplementUser);
         }catch (Exception e){
             e.printStackTrace();

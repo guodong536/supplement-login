@@ -1,0 +1,25 @@
+package drool;
+
+import com.pingan.pare.bi.login.domain.vo.Order;
+import com.pingan.pare.bi.login.domain.vo.User;
+
+
+function String show(User user){
+    if(user.getAge()>=18){
+        return "成年了";
+    }
+    return "未成年人";
+}
+
+//one-rule
+rule "first"
+    //no-loop true
+    //效果等同于 no-loop true
+    lock-on-active true
+    salience 9
+    when
+        $user:User()
+        eval($user);
+    then
+        $user.setName("11111");
+end
