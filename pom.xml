@@ -51,7 +51,7 @@
         <jackson.version>1.9.13</jackson.version>
         <velocity.version>2.0</velocity.version>
         <commons-lang3>2.4</commons-lang3>
-        <jackson-databind>2.9.6</jackson-databind>
+        <jackson-databind>2.12.7.1</jackson-databind>
         <fastjson.version>1.2.54</fastjson.version>
         <guava.version>18.0</guava.version>
         <spring-data-mongodb.version>2.1.1.RELEASE</spring-data-mongodb.version>
